@@ -1,0 +1,28 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>jQuery Selector</title>
+    <link href="../Styles/Site.css" rel="stylesheet" type="text/css" />
+    <style> div { background : #FFF; padding:10px; margin:10px; }     </style>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript">         $(document).ready(function () {
+            $("input[name*='man']").css("background", "yellow");
+        });    
+    </script>
+</head>
+
+<body style="padding:10px;">
+    <h2>jQuery 시작 Selector</h2>
+    <p>jQuery에 대한 자세한 내용을 보려면 jquery.com 을 방문할 수 있다.</p>
+    <div>
+        <p>"name"값에 man이 포함된 요소를 표시한다.</p>
+        <input name="man" value="name is man" /><br />
+        <input name="superman" value="name is superman" /><br />
+        <input name="iron man" value="name is iron man" /><br />
+        <input name="bat man" value="name is bat man" /><br />
+        <input name="joker" value="name is joker" /><br />
+        <input name="manual" value="name is manual" /><br />
+    </div>
+</body>
+
+</html>

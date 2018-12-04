@@ -1,0 +1,38 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>jQuery Selector</title>
+    <link href="../Styles/Site.css" rel="stylesheet" type="text/css" />
+    <style>
+        div { background : #FFF; padding:10px; margin:10px; }
+</style>
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //HTML 문서내의 모든 엘리먼트를 찾아 붉은 선으로 표시합니다.
+            $("*").css("border", "1px solid #ff0000");                     //전체 "*" 모든 
+        }); 
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //ID 가 Content 읶 요소를 찾아 배경을 "yellow"로 변경한다.    ID Sector 
+            $("#content").css("background", "yellow");
+        });
+    </script>
+</head>
+
+<body>
+    <h2>jQuery 시작 Selector</h2>
+    <p>jQuery에 대한 자세한 내용을 보려면 jquery.com 을 방문할 수 있다.</p>
+    <div>
+        <div id="content">
+            이 부분은 ID 값이 content 이다.
+        </div>
+    </div>
+
+</body>
+
+</html>

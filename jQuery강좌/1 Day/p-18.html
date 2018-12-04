@@ -1,0 +1,28 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>jQuery Selector</title>
+    <link href="jquery-3.1.1/Site.css" rel="stylesheet" type="text/css" />
+    <style>
+        div,span {
+                width:100px; height:40px; float:left; padding:10px; margin:10px;
+                background-color:#EEEEEE;
+                }     
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //Class가 myClass읶 요소를 찾아 테두리를 "blue"로 변경한다.   //  class 
+            $("div.myClass").css("border", "2px solid blue");
+        }); </script>
+</head>
+
+<body style="padding:10px;">
+    <h2>jQuery 시작 Selector</h2>
+    <p id=content> jQuery에 대한 자세한 내용을 보려면 jquery.com 을 방문할 수 있다.</p> 
+    
+    <span class="myClass">SPAN class="myClass"</span>
+    <div>DIV</div>
+    <span>SPAN</span>
+    <div class="myClass">DIV class="myClass"</div>
+</body>

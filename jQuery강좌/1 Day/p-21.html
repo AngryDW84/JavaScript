@@ -1,0 +1,31 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>jQuery Selector</title>
+    <link href="jquery-3.1.1/Site.css" rel="stylesheet" type="text/css" />
+    <style>
+
+        div { background : #FFF; padding:10px; margin:10px; }  
+      </style>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("div > a[target]").css("background", "#CCC");
+        });  
+    </script>
+</head>
+
+<body style="padding:10px;">
+    <h2>jQuery 시작 Selector</h2>
+    <p>jQuery에 대한 자세한 내용을 보려면 jquery.com 을 방문할 수 있다.</p>
+    <div>
+        <a href="http://www.slqer.com">SQLER.COM (No Target)</a><br />
+        <a href="http://www.slqer.com" target="_blank">SQLER.COM (Target)</a><br />
+        <a href="http://www.hoons.kr">Hoons.NET (No Target)</a><br />
+        <a href="http://www.hoons.kr" target="_blank">Hoons.NET (Target)</a><br />
+        <a href="http://www.hows.kr">HowsNET (No Target)</a><br />
+        <a href="http://www.hows.kr" target="_blank">HowsNET (No Target)</a><br />
+    </div>
+</body>
+
+</html>
