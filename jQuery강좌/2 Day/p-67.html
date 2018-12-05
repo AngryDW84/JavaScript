@@ -1,0 +1,37 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>jQuery Selector</title>
+    <link href="../Styles/Site.css" rel="stylesheet" type="text/css" />
+    <style>
+        div,pre { background : #FFF; padding:10px; margin:10px; }         table { border:1px solid #AAA; }         td { border:1px solid #AAA; width:25px; height:25px; }     </style>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var liText = $("li").map(function (index) {
+                return "[(" + index + ")" + $(this).text() + "]";
+            }).get().join(',');
+        $("#result").text(liText);
+        });
+    </script>
+</head>
+
+<body style="padding:10px;">
+    <h2>jQuery 시작 Selector</h2>
+    <p>jQuery에 대한 자세한 내용을 보려면 jquery.com 을 방문할 수 있다.</p>
+    <div>
+        <ul>
+            <li>list item 1</li>
+            <li>list item 2
+                <ul>
+                    <li>list item 2-a</li>
+                    <li>list item 2-b</li>
+                </ul>
+            </li>
+            <li>list item 3</li>
+            <li>list item 4</li>
+        </ul>
+    </div>
+</body>
+
+</html>

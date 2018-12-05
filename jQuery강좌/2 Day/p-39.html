@@ -1,0 +1,37 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>jQuery Selector</title>
+    <link href="../Styles/Site.css" rel="stylesheet" type="text/css" />
+    <style>
+        div,span           
+            {             width:100px;              height:80px;              float:left;  
+                        padding:10px;              margin:10px;              background-color:#EEEEEE;          }         
+        div#small          
+            {             width:60px;             height:20px;             font-size:12px;             background:#fab;         }   
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#prev ~ div").css("border", "3px groove blue");
+            // $(“#prev ~ div”)의 경우 id의 값이 prev 인 요소를 찾고 
+            // 해당 요소를 제외한 다음 형제 요소 중에 div와 동일한 요소를 찾아 반홖을 한다. 
+        });    
+    </script>
+</head>
+
+<body style="padding:10px;">
+    <h2>jQuery 시작 Selector</h2>
+    <p id="content">jQuery 에 대한 자세한 내용을 보려면 jquery.com 을 방문할 수 있다.</p>
+
+    <div>div (doesn't match since before #prev)</div>
+    <span id="prev">span#prev</span>
+    <div>div sibling</div>
+    <div>div sibling
+        <div id="small">div niece</div>
+    </div>
+    <span>span sibling (not div)</span>
+    <div>div sibling</div>
+</body>
+
+</html

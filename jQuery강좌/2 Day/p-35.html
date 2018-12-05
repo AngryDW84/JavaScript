@@ -1,0 +1,48 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>jQuery Selector</title>
+    <link href="../Styles/Site.css" rel="stylesheet" type="text/css" />
+    <style>div { background-color:#EEEEEE; padding:10px; }</style>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript">         $(document).ready(function () {
+            $("#siteUrl1 > li").css("border", "1px solid #ff0000");    // 자식(Child) 셀렉터를 이용하여 개체를 선택한 모습
+            $("#siteUrl2 li").css("border", "1px solid blue");         // 후손(Descendant) 셀렉터에 의핬 개체를 선택한 모습
+        });     
+    </script>
+</head>
+
+<body style="padding:10px;">
+    <h2>jQuery 시작 Selector</h2>
+    <p>jQuery에 대한 자세한 내용을 보려면 jquery.com 을 방문할 수 있다.</p>
+    <div>
+        <ul id="siteUrl1">
+            <li>Sqler : http://www.sqler.com</li>
+            <li>jQuery : http://jquery.com</li>
+            <li>
+                <ul>
+                    <li>Blog : http://www.hows.kr</li>
+                    <li>Community : http://www.hoons.kr</li>
+                </ul>
+            </li>
+            <li>Items</li>
+            <li>Items</li>
+            <li>Items</li>
+        </ul>
+        <ul id="siteUrl2">
+            <li>Sqler : http://www.sqler.com</li>
+            <li>jQuery : http://jquery.com</li>
+            <li>
+                <ul>
+                    <li>Blog : http://www.hows.kr</li>
+                    <li>Community : http://www.hoons.kr</li>
+                </ul>
+            </li>
+            <li>Items</li>
+            <li>Items</li>
+            <li>Items</li>
+        </ul>
+    </div>
+</body>
+
+</html>
