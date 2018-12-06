@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        p,
+        div {
+            margin: 5px;
+            padding: 5px;
+        }
+
+        .border {
+            border: 2px solid red;
+        }
+
+        .background {
+            background: yellow;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+
+<body>
+    <div>
+        <p>First Paragraph</p>
+        <p>Second Paragraph</p>
+    </div>
+
+    <p>First Paragraph</p>
+    <p>Second Paragraph</p>
+
+    <script>
+        $("div").find("p").andSelf().addClass("border");
+        $("div").find("p").addClass("background");     
+        $("*").find("p").andSelf().addClass("border");
+        $("").find("p").addClass("background");     
+    </script>
+</body>
+
+</html>
