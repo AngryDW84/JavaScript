@@ -1,0 +1,41 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>jQuery Selector</title>
+    <link href="jquery-3.1.1/Site.css" rel="stylesheet" type="text/css" />
+    <style> 
+        div,pre { background : #FFF; padding:10px; margin:10px; }             
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript">         
+    
+        $(document).ready(function () {
+            $('#btnAdd').click(function () { $('ul').append('<li>list item Add(' + $('li').length + ')</li>'); });
+
+            $('li').live('click', function () { alert($(this).text()); });
+
+            $('#btnDie').click(eventDie);
+        });
+
+        function eventDie() {
+            $('li').die();
+            // or 
+            $('li').die('click');         
+        }     
+    </script>
+</head>
+
+<body style="padding:10px;">
+    <h2>jQuery 시작 Selector</h2>
+
+    <p>jQuery에 대한 자세한 내용을 보려면 jquery.com 을 방문할 수 있다.</p>
+    <div>
+        <input type="button" id="btnAdd" value="Add Element" />
+        <input type="button" id="btnDie" value="Event Die" />
+        <ul>
+            <li>list item Start!!</li>
+        </ul>
+    </div>
+</body>
+
+</html>
